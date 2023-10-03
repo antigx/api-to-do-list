@@ -89,7 +89,39 @@ Update a ToDo item by its ID.
 
 ### Error Handling
 
-- \`400 Bad Request\` - Invalid request format or missing required parameters.
-- \`404 Not Found\` - Resource not found (for example, when deleting or updating a non-existing ToDo item).
-- \`500 Internal Server Error\` - Server error occurred while processing the request.
+- `400 Bad Request` - Invalid request format or missing required parameters.
+- `404 Not Found` - Resource not found (for example, when deleting or updating a non-existing ToDo item).
+- `500 Internal Server Error` - Server error occurred while processing the request.
+
+  ## Local Setup
+
+To run the ToDo application locally on your machine, follow these steps:
+
+### Prerequisites
+
+Make sure you have the following installed on your system:
+
+- [Node.js](https://nodejs.org/) (v14 or higher)
+- [npm](https://www.npmjs.com/) (usually comes bundled with Node.js)
+
+### Clone the Repository
+
+```
+git clone https://github.com/antigx/api-to-do-list.git
+cd api-to-do-list
+```
+
+### Install Dependencies
+```
+npm install
+```
+
+###S tart the Development Server
+```
+npm start
+```
+The application will be available at http://localhost:3000. You can access the API endpoints described above locally using this base URL.
+
+### Explore the API
+You can use tools like Postman to interact with the API endpoints locally. Make requests to http://localhost:3000/todos for managing ToDo items.
 
