@@ -6,17 +6,17 @@ Welcome to the API documentation for your ToDo application! This API allows you 
 
 #### Get ToDos
 
-\```http
+```http
 GET /todos
-\```
+```
 
 Retrieve a list of all ToDo items.
 
 ##### Response
 
-- \`200 OK\` - Successfully retrieved the list of ToDo items.
+- `200 OK` - Successfully retrieved the list of ToDo items.
 
-\```json
+```json
 [
   {
     "id": "unique-id",
@@ -27,65 +27,65 @@ Retrieve a list of all ToDo items.
   },
   // ...more ToDo items
 ]
-\```
+```
 
 #### Create ToDo
 
-\```http
+```http
 POST /todos
-\```
+```
 
 Create a new ToDo item.
 
 ##### Request Body
 
-- \`title\` (string, required): The title of the task.
-- \`text\` (string): The description of the task.
-- \`color\` (string): The color code for the task (optional).
-- \`favorite\` (boolean): Whether the task is marked as a favorite (optional).
+- `title` (string, required): The title of the task.
+- `text` (string): The description of the task.
+- `color` (string): The color code for the task (optional).
+- `favorite` (boolean): Whether the task is marked as a favorite (optional).
 
 ##### Response
 
-- \`201 Created\` - Successfully created the ToDo item.
+- `201 Created` - Successfully created the ToDo item.
 
 #### Delete ToDo
 
-\```http
+```http
 DELETE /todos/:id
-\```
+```
 
 Delete a ToDo item by its ID.
 
 ##### Parameters
 
-- \`id\` (string, required): The ID of the ToDo item to delete.
+- `id` (string, required): The ID of the ToDo item to delete.
 
 ##### Response
 
-- \`200 OK\` - Successfully deleted the ToDo item.
+- `200 OK` - Successfully deleted the ToDo item.
 
 #### Update ToDo
 
-\```http
+```http
 PATCH /todos/:id
-\```
+```
 
 Update a ToDo item by its ID.
 
 ##### Parameters
 
-- \`id\` (string, required): The ID of the ToDo item to update.
+- `id` (string, required): The ID of the ToDo item to update.
 
 ##### Request Body
 
-- \`title\` (string): The updated title of the task.
-- \`text\` (string): The updated description of the task.
-- \`color\` (string): The updated color code for the task.
-- \`favorite\` (boolean): The updated favorite status of the task.
+- `title` (string): The updated title of the task.
+- `text` (string): The updated description of the task.
+- `color` (string): The updated color code for the task.
+- `favorite` (boolean): The updated favorite status of the task.
 
 ##### Response
 
-- \`200 OK\` - Successfully updated the ToDo item.
+- `200 OK` - Successfully updated the ToDo item.
 
 ### Error Handling
 
