@@ -24,7 +24,7 @@ Retrieve a list of all ToDo items.
     "text": "Task Description",
     "color": "#FFFFFF",
     "favorite": false
-  },
+  }
   // ...more ToDo items
 ]
 ```
@@ -112,16 +112,19 @@ cd api-to-do-list
 ```
 
 ### Install Dependencies
+
 ```
 npm install
 ```
 
 ### Start the Development Server
+
 ```
 npm start
 ```
-The application will be available at http://localhost:3000. You can access the API endpoints described above locally using this base URL.
+
+The application will be available at http://localhost:5000. You can access the API endpoints described above locally using this base URL.
 
 ### Explore the API
-You can use tools like Postman to interact with the API endpoints locally. Make requests to http://localhost:3000/todos for managing ToDo items.
 
+You can use tools like Postman to interact with the API endpoints locally. Make requests to http://localhost:3000/todos for managing ToDo items.
