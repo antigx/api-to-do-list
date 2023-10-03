@@ -116,7 +116,7 @@ cd api-to-do-list
 npm install
 ```
 
-###S tart the Development Server
+### Start the Development Server
 ```
 npm start
 ```
