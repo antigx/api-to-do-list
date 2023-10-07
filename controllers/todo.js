@@ -1,15 +1,33 @@
 import { v4 as uuidv4 } from "uuid";
+import { insertTodo, getDBTodos } from "./bd.js";
 
-let toDos = [];
+let toDos = [
+  {
+    id: "d39c238a-012c-4c0a-a1b6-a924d9da9440",
+    title: "sdfas",
+    text: "asdf",
+    color: "#FFFFFF",
+    favorite: 0,
+  },
+];
 
 export const getToDo = (req, res) => {
-  res.send(toDos);
+  res.json(toDos);
+  /*   getDBTodos((json) => {
+    res.send(json);
+  }); */
 };
 
 export const createToDo = (req, res) => {
-  const toDo = req.body;
-  toDos.push({ ...toDo, id: uuidv4(), createdAt: new Date() });
-  res.send(toDos);
+  const { title, text, color, favorite } = req.body;
+
+  insertTodo(uuidv4(), title, text, color, favorite);
+  getDBTodos((json) => {
+    res.send(json);
+  });
+  /*   const toDo = req.body;
+  toDos.push({ ...toDo, id: , createdAt: new Date() });
+  res.send(toDos); */
 };
 
 export const deleteToDo = (req, res) => {
