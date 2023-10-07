@@ -1,5 +1,4 @@
 import { v4 as uuidv4 } from "uuid";
-import { insertTodo, getDBTodos } from "./bd.js";
 
 let toDos = [
   {
@@ -19,15 +18,15 @@ export const getToDo = (req, res) => {
 };
 
 export const createToDo = (req, res) => {
-  const { title, text, color, favorite } = req.body;
+  /*   const { title, text, color, favorite } = req.body;
 
   insertTodo(uuidv4(), title, text, color, favorite);
   getDBTodos((json) => {
     res.send(json);
-  });
-  /*   const toDo = req.body;
-  toDos.push({ ...toDo, id: , createdAt: new Date() });
-  res.send(toDos); */
+  }); */
+  const toDo = req.body;
+  toDos.push({ ...toDo, id: uuidv4() });
+  res.send(toDos);
 };
 
 export const deleteToDo = (req, res) => {
